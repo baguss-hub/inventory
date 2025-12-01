@@ -1,0 +1,111 @@
+/* ===============================
+   SIDEBAR
+   =============================== */
+
+/* Sidebar utama */
+.custom-sidebar-primary {
+    background-color: #053D47 !important; /* primary color */
+    color: #FFFFFF !important; /* teks tetap putih */
+}
+
+/* Brand logo text */
+.custom-sidebar-primary .brand-link .brand-text {
+    color: #FFFFFF !important;
+}
+
+/* User panel text */
+.custom-sidebar-primary .user-panel .info a {
+    color: #FFFFFF !important;
+}
+
+/* Hover user panel */
+.custom-sidebar-primary .user-panel .info a:hover {
+    color: #a4a4a4 !important;
+}
+
+/* Menu link teks */
+.custom-sidebar-primary .nav-link {
+    color: #FFFFFF !important;
+}
+
+/* Hover menu link */
+.custom-sidebar-primary .nav-link:hover {
+    background-color: #EB5F24 !important; /* secondary hover */
+    color: #FFFFFF !important;
+}
+
+/* Active menu item */
+.custom-sidebar-primary .nav-link.active {
+    background-color: #042D35 !important; /* primary gelap */
+    color: #FFFFFF !important;
+}
+
+/* Icon menu */
+.custom-sidebar-primary .nav-icon {
+    color: #FFFFFF !important;
+}
+
+/* ===============================
+   CONTENT WRAPPER
+   =============================== */
+
+/* Background konten utama */
+.content-wrapper {
+    background-color: #F0F0EB !important; /* broken white kontras */
+    color: #222222; /* default teks */
+}
+
+/* Card / panel default */
+.content-wrapper .card {
+    background-color: #FFFFFF !important; /* putih bersih */
+    color: #222222; /* teks gelap agar terbaca */
+}
+
+/* Card header secondary */
+.content-wrapper .card .card-header,
+.card-secondary-header {
+    background-color: #EB5F24 !important; /* secondary color */
+    color: #FFFFFF !important;
+}
+ 
+/* Badge / status / highlight */
+.badge-secondary {
+    background-color: #EB5F24 !important;
+    color: #FFFFFF !important;
+}
+
+/* ===============================
+   BUTTONS
+   =============================== */
+
+/* Tombol primary */
+.btn-primary {
+    background-color: #053D47 !important;
+    border-color: #053D47 !important;
+    color: #FFFFFF !important;
+}
+
+/* Tombol secondary */
+.btn-secondary {
+    background-color: #EB5F24 !important;
+    border-color: #EB5F24 !important;
+    color: #FFFFFF !important;
+}
+
+/* ===============================
+   TABLE
+   =============================== */
+
+/* Table teks default */
+.table td, .table th {
+    color: #222222 !important;
+}
+
+/* Hover row tabel */
+.table tbody tr:hover {
+    background-color: #EB5F24 !important; /* secondary hover */
+    color: #FFFFFF !important;
+}
+
+
+
