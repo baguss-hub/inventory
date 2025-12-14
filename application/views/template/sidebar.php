@@ -55,20 +55,20 @@
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a href="<?= base_url('ortu'); ?>" class="nav-link <?= (isset($data['menu']) && $data['menu']=='ortu') ? 'active' : ''; ?>">
-                <i class="fas fa-users nav-icon"></i>
-                <p></p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
-                <i class="fas fa-child nav-icon"></i>
-                <p>Anak</p>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link">
                 <i class="fas fa-user nav-icon"></i>
                 <p>User</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-list nav-icon"></i>
+                <p>Kategori</p>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="#" class="nav-link">
+                <i class="fas fa-boxes nav-icon"></i>
+                <p>Barang</p>
               </a>
             </li>
           </ul>
@@ -86,14 +86,14 @@
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="fas fa-user-check nav-icon"></i>
-                <p>Kunjungan</p>
+                <i class="fas fa-arrow-circle-down nav-icon"></i>
+                <p>Barang Masuk</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="fas fa-ruler nav-icon"></i>
-                <p>Pengukuran</p>
+                <i class="fas fa-arrow-circle-up nav-icon"></i>
+                <p>Barang Keluar</p>
               </a>
             </li>
           </ul>
@@ -111,14 +111,14 @@
           <ul class="nav nav-treeview">
             <li class="nav-item">
               <a href="#" class="nav-link">
-                <i class="fas fa-file-alt nav-icon"></i>
-                <p>Laporan Kunjungan</p>
+                <i class="fas fa-file-import nav-icon"></i>
+                <p>Laporan Barang Masuk</p>
               </a>
             </li>
             <li class="nav-item">
               <a href="#" class="nav-link ">
-                <i class="fas fa-file-medical-alt nav-icon"></i>
-                <p>Laporan Pengukuran</p>
+                <i class="fas fa-file-export nav-icon"></i>
+                <p>Laporan Barang Keluar</p>
               </a>
             </li>
           </ul>
