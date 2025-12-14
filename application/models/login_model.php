@@ -8,9 +8,8 @@ class Login_model extends CI_Model
     {
         $this->db->from('user'); // nama tabel: user
 
-        // email atau name
-        $this->db->where("(email = " . $this->db->escape($identity) . " 
-                          OR nama_user  = " . $this->db->escape($identity) . ")");
+        // username
+        $this->db->where("username = " . $this->db->escape($identity) . "");
 
         // password disimpan md5 di DB
         $this->db->where('password', md5($password));
