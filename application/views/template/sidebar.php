@@ -56,7 +56,7 @@
             <li class="nav-item">
               <a href="<?= base_url('ortu'); ?>" class="nav-link <?= (isset($data['menu']) && $data['menu']=='ortu') ? 'active' : ''; ?>">
                 <i class="fas fa-users nav-icon"></i>
-                <p>Orang Tua</p>
+                <p></p>
               </a>
             </li>
             <li class="nav-item">

@@ -33,14 +33,13 @@ class Login extends CI_Controller {
         if ($user) {
             $this->session->set_userdata([
                 'id_user'   => $user->id_user,
-                'nama_user' => $user->nama_user,
-                'email'     => $user->email,
+                'username' => $user->username,
                 'logged_in' => TRUE
             ]);
 
             redirect('dashboard'); // ke BASE_URL/index.php/dashboard
         } else {
-            $this->session->set_flashdata('error', 'Email/Username atau password salah');
+            $this->session->set_flashdata('error', 'Username atau password salah');
             redirect('login');
         }
     }
