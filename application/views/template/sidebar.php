@@ -44,7 +44,7 @@
         </li>
 
         <!-- Manajemen Data -->
-        <li class="nav-item menu-close">
+        <li class="nav-item menu-open">
           <a href="#" class="card-header card-secondary-header nav-link">
             <i class="nav-icon fas fa-table"></i>
             <p>
@@ -53,20 +53,31 @@
             </p>
           </a>
           <ul class="nav nav-treeview">
+            <!-- <li class="nav-item">
+              <a href="<?= base_url('user')?>" class="nav-link">
+                <i class="fas fa-user nav-icon"></i>
+                <p>User</p>
+              </a>
+            </li> -->
+
+            <!-- Menu User Hanya untuk Admin -->
+            <?php if($this->session->userdata('role') == 'admin'): ?>
             <li class="nav-item">
-              <a href="<?= base_url('ortu'); ?>" class="nav-link <?= (isset($data['menu']) && $data['menu']=='ortu') ? 'active' : ''; ?>">
+              <a href="<?= base_url('user')?>" class="nav-link">
                 <i class="fas fa-user nav-icon"></i>
                 <p>User</p>
               </a>
             </li>
+            <?php endif; ?>
+
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="<?= base_url('kategori') ?>" class="nav-link">
                 <i class="fas fa-list nav-icon"></i>
                 <p>Kategori</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="<?= base_url('barang') ?>" class="nav-link">
                 <i class="fas fa-boxes nav-icon"></i>
                 <p>Barang</p>
               </a>
@@ -75,7 +86,7 @@
         </li>
 
         <!-- Transaksi -->
-        <li class="nav-item menu-close">
+        <li class="nav-item menu-open">
           <a href="#" class="card-header card-secondary-header nav-link">
             <i class="nav-icon fas fa-exchange-alt"></i>
             <p>
@@ -85,13 +96,13 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="<?= base_url('barang_masuk') ?>" class="nav-link">
                 <i class="fas fa-arrow-circle-down nav-icon"></i>
                 <p>Barang Masuk</p>
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="<?= base_url('barang_keluar') ?>" class="nav-link">
                 <i class="fas fa-arrow-circle-up nav-icon"></i>
                 <p>Barang Keluar</p>
               </a>
@@ -110,7 +121,7 @@
           </a>
           <ul class="nav nav-treeview">
             <li class="nav-item">
-              <a href="#" class="nav-link">
+              <a href="<?= base_url('laporan_barang_masuk') ?>" class="nav-link">
                 <i class="fas fa-file-import nav-icon"></i>
                 <p>Laporan Barang Masuk</p>
               </a>

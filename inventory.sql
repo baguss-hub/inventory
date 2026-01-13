@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Dec 14, 2025 at 02:33 PM
+-- Generation Time: Jan 13, 2026 at 06:26 AM
 -- Server version: 8.0.30
 -- PHP Version: 8.1.10
 
@@ -36,6 +36,19 @@ CREATE TABLE `barang` (
   `create_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Dumping data for table `barang`
+--
+
+INSERT INTO `barang` (`id_barang`, `kategori_id`, `nama_barang`, `stok`, `satuan`, `create_at`) VALUES
+(1, 1, 'Multo', 1, 'Pcs', '2026-01-12 10:37:51'),
+(2, 3, 'Minyak', 3, 'Liter', '2026-01-12 10:38:22'),
+(3, 4, 'Pencil', 50, 'Pack', '2026-01-12 10:39:28'),
+(4, 4, 'Buku', 50, 'Pack', '2026-01-12 10:39:59'),
+(5, 1, 'AOKA', 2, 'Pack', '2026-01-13 05:49:59'),
+(6, 3, 'Minyak', 200, 'Liter', '2026-01-13 05:50:51'),
+(7, 1, 'Minyak', 98, 'Pack', '2026-01-13 06:03:28');
+
 -- --------------------------------------------------------
 
 --
@@ -64,6 +77,18 @@ CREATE TABLE `barang_masuk` (
   `user_id` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Dumping data for table `barang_masuk`
+--
+
+INSERT INTO `barang_masuk` (`id_masuk`, `barang_id`, `jumlah`, `tanggal`, `user_id`) VALUES
+(1, 2, 400, '2026-01-12', 2),
+(2, 1, 211, '2026-01-12', 2),
+(3, 4, 23, '2026-01-12', 13),
+(4, 1, 24234, '2026-01-13', 13),
+(5, 1, 324, '2026-01-13', 2),
+(6, 5, 2432, '2026-01-13', 2);
+
 -- --------------------------------------------------------
 
 --
@@ -75,6 +100,16 @@ CREATE TABLE `kategori` (
   `nama_kategori` varchar(128) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
+--
+-- Dumping data for table `kategori`
+--
+
+INSERT INTO `kategori` (`id_kategori`, `nama_kategori`) VALUES
+(1, 'Snack'),
+(2, 'Minuman'),
+(3, 'Sembako'),
+(4, 'ATK');
+
 -- --------------------------------------------------------
 
 --
@@ -85,6 +120,8 @@ CREATE TABLE `user` (
   `id_user` int NOT NULL,
   `username` varchar(128) NOT NULL,
   `password` varchar(128) NOT NULL,
+  `password_view` varchar(100) NOT NULL,
+  `role` varchar(12) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL DEFAULT 'pegawai',
   `create_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 
@@ -92,8 +129,9 @@ CREATE TABLE `user` (
 -- Dumping data for table `user`
 --
 
-INSERT INTO `user` (`id_user`, `username`, `password`, `create_at`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', '2025-12-14 14:21:32');
+INSERT INTO `user` (`id_user`, `username`, `password`, `password_view`, `role`, `create_at`) VALUES
+(2, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin', 'admin', '2025-12-14 15:00:39'),
+(13, 'Dodo', '721c6ff80a6d3e4ad4ffa52a04c60085', 'dodo', 'pegawai', '2026-01-12 10:42:22');
 
 --
 -- Indexes for dumped tables
@@ -142,7 +180,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `barang`
 --
 ALTER TABLE `barang`
-  MODIFY `id_barang` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id_barang` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `barang_keluar`
@@ -154,19 +192,19 @@ ALTER TABLE `barang_keluar`
 -- AUTO_INCREMENT for table `barang_masuk`
 --
 ALTER TABLE `barang_masuk`
-  MODIFY `id_masuk` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id_masuk` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `kategori`
 --
 ALTER TABLE `kategori`
-  MODIFY `id_kategori` int NOT NULL AUTO_INCREMENT;
+  MODIFY `id_kategori` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-  MODIFY `id_user` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- Constraints for dumped tables

@@ -7,14 +7,14 @@ class Login extends CI_Controller {
     {
         parent::__construct();
         $this->load->model('Login_model');
-        $this->load->library('session');
-        $this->load->helper(['url','form']);
+        $this->load->library('session'); // pastikan session di-load
+        $this->load->helper('url');      // helper URL untuk redirect
     }
 
-    // tampilkan form login
+    // Halaman login
     public function index()
     {
-        // kalau sudah login, langsung ke dashboard
+        // Kalau sudah login, langsung ke dashboard
         if ($this->session->userdata('logged_in')) {
             redirect('dashboard');
         }
@@ -22,31 +22,35 @@ class Login extends CI_Controller {
         $this->load->view('login');
     }
 
-    // INI YANG DICARI OLEH URL /login/proses
+    // Proses login
     public function proses()
     {
-        $identity = $this->input->post('identity', TRUE); // email / username
-        $password = $this->input->post('password', TRUE);
+        $username = $this->input->post('username');
+        $password = $this->input->post('password');
 
-        $user = $this->Login_model->cek_login($identity, $password);
+        $user = $this->Login_model->cek_login($username, $password);
 
         if ($user) {
+            // SIMPAN SESSION LOGIN
             $this->session->set_userdata([
-                'id_user'   => $user->id_user,
-                'username' => $user->username,
+                'id_user'   => $user->id_user,   // penting untuk FK
+                'username'  => $user->username,
+                'role'      => $user->role,
                 'logged_in' => TRUE
             ]);
 
-            redirect('dashboard'); // ke BASE_URL/index.php/dashboard
+            redirect('dashboard');
         } else {
-            $this->session->set_flashdata('error', 'Username atau password salah');
+            // Kalau login gagal
+            $this->session->set_flashdata('error', 'Username atau Password salah!');
             redirect('login');
         }
     }
 
+    // Logout
     public function logout()
     {
-        $this->session->sess_destroy();
+        $this->session->sess_destroy(); // hapus semua session
         redirect('login');
     }
 }

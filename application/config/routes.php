@@ -49,6 +49,37 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 | Examples:	my-controller/index	-> my_controller/index
 |		my-controller/my-method	-> my_controller/my_method
 */
-$route['default_controller'] = 'dashboard';
+$route['default_controller'] = 'login';
 $route['404_override'] = '';
 $route['translate_uri_dashes'] = FALSE;
+
+
+//Data Admin/User
+$route['user'] = 'user_controller/index';
+$route['user/tambah'] = 'user_controller/tambah_user';
+$route['user/hapus/(:num)'] = 'user_controller/hapus_user/$1';
+$route['user/ubah/(:num)'] = 'user_controller/ubah_user/$1';
+
+//Data Kategori
+$route['kategori'] = 'kategori_controller/index';
+$route['kategori/tambah'] = 'kategori_controller/tambah_kategori';
+$route['kategori/hapus/(:num)'] = 'kategori_controller/hapus_kategori/$1';
+$route['kategori/ubah/(:num)'] = 'kategori_controller/ubah_kategori/$1';
+
+//Data Barang
+$route['barang'] = 'barang_controller/index';
+$route['barang/tambah'] = 'barang_controller/tambah_barang';
+$route['barang/hapus/(:num)'] = 'barang_controller/hapus_barang/$1';
+$route['barang/ubah/(:num)'] = 'barang_controller/ubah_barang/$1';
+
+//Data Barang Masuk
+$route['barang_masuk'] = 'barang_masuk_controller/index';
+$route['barang_masuk/tambah'] = 'barang_masuk_controller/tambah_barang_masuk';
+
+//Data Barang Keluar
+$route['barang_keluar'] = 'barang_keluar_controller/index';
+$route['barang_keluar/tambah'] = 'barang_keluar_controller/tambah_barang_keluar';
+
+//Data Laporan Barang Masuk
+$route['laporan_barang_masuk'] = 'laporan_barang_masuk_controller/index';
+$route['laporan_barang_masuk/cetak'] = 'laporan_barang_masuk_controller/cetak'; 
