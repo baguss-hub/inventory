@@ -127,7 +127,7 @@
               </a>
             </li>
             <li class="nav-item">
-              <a href="#" class="nav-link ">
+              <a href="<?= base_url('laporan_barang_keluar') ?>" class="nav-link">
                 <i class="fas fa-file-export nav-icon"></i>
                 <p>Laporan Barang Keluar</p>
               </a>

@@ -106,7 +106,7 @@ class Barang_controller extends CI_Controller {
 
                 $this->load->view('template/header', $data);
                 $this->load->view('template/sidebar');
-                $this->load->view('barang/edit', $data);
+                $this->load->view('barang/ubah_barang', $data);
                 $this->load->view('template/footer');
             }
         } else {

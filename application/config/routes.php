@@ -83,3 +83,7 @@ $route['barang_keluar/tambah'] = 'barang_keluar_controller/tambah_barang_keluar'
 //Data Laporan Barang Masuk
 $route['laporan_barang_masuk'] = 'laporan_barang_masuk_controller/index';
 $route['laporan_barang_masuk/cetak'] = 'laporan_barang_masuk_controller/cetak'; 
+
+//Data Laporan Barang Keluar
+$route['laporan_barang_keluar'] = 'laporan_barang_keluar_controller/index';
+$route['laporan_barang_keluar/cetak'] = 'laporan_barang_keluar_controller/cetak';
