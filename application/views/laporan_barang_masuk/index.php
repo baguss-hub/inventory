@@ -33,7 +33,7 @@
                 <tr>
                     <td class="text-center"><?= $no++ ?></td>
                     <td><?= $row['nama_barang'] ?></td>
-                    <td class="text-center"><?= $row['stok'] ?></td>
+                    <td class="text-center"><?= $row['jumlah_masuk'] ?></td>
                     <td class="text-center"><?= $row['tanggal_masuk'] ?></td>
                     <td class="text-center"><?= $row['username'] ?></td>
                 </tr>

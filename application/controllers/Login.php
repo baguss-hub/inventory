@@ -31,7 +31,7 @@ class Login extends CI_Controller {
         $user = $this->Login_model->cek_login($username, $password);
 
         if ($user) {
-            // SIMPAN SESSION LOGIN
+            // Menyimpan data user ke session
             $this->session->set_userdata([
                 'id_user'   => $user->id_user,   // penting untuk FK
                 'username'  => $user->username,

@@ -7,7 +7,7 @@ class Laporan_barang_masuk_model extends CI_Model {
     {
         $this->db->select('
             barang.nama_barang,
-            barang.stok,
+            barang_masuk.jumlah_masuk,
             barang_masuk.tanggal_masuk,
             user.username
         ');

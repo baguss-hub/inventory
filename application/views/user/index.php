@@ -40,6 +40,7 @@
                                 <th scope="col">ID_User</th>
                                 <th scope="col">Nama User</th>
                                 <th scope="col">Password</th>
+                                <th scope="col">Password md5</th>
                                 <th scope="col">Aksi</th>
                             </tr>
                         </thead>
@@ -49,6 +50,7 @@
                                     <th scope="row"><?= $no ?></th>
                                     <td><?= $user['username'] ?></td>
                                     <td><?= $user['password_view'] ?></td>
+                                    <td><?= $user['password'] ?></td>
                                     
                                     <td>
                                         <a href="<?= base_url('user/ubah/'.$user['id_user']) ?>">

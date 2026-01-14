@@ -35,14 +35,14 @@ class Barang_keluar_model extends CI_Model {
         return $this->db->insert($this->_table, $data);
     }
 
-    // Hapus data barang masuk
+    // Hapus data barang keluar
     public function hapus($id)
     {
         $this->db->where('id_masuk', $id);
         return $this->db->delete($this->_table);
     }
 
-    // Ambil data barang masuk berdasarkan id
+    // Ambil data barang keluar berdasarkan id
     public function get_by_id($id)
     {
         $this->db->select('barang_keluar.id_keluar, barang.nama_barang, barang_keluar.jumlah_keluar, barang_keluar.tanggal_keluar, user.username, barang_keluar.barang_id');

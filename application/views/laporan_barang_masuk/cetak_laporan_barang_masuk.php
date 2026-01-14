@@ -37,7 +37,7 @@
         <tr>
             <td><?= $no++ ?></td>
             <td><?= $row['nama_barang'] ?></td>
-            <td><?= $row['stok'] ?></td>
+            <td><?= $row['jumlah_masuk'] ?></td>
             <td><?= $row['tanggal_masuk'] ?></td>
             <td><?= $row['username'] ?></td>
         </tr>

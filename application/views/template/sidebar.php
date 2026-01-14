@@ -35,7 +35,7 @@
         
         <!-- Dashboard-->
         <li class="nav-item menu-open">
-          <a href="#" class="card-header card-secondary-header nav-link">
+          <a href="<?= base_url('dashboard') ?>" class="card-header card-secondary-header nav-link">
             <i class="nav-icon fas fa-tachometer-alt"></i>
             <p>
               Dashboard

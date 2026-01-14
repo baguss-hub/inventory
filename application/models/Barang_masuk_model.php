@@ -8,7 +8,7 @@ class Barang_masuk_model extends CI_Model {
     // Ambil semua data barang masuk dengan join barang & user
     public function get_all()
     {
-        $this->db->select('barang_masuk.id_masuk, barang.nama_barang, barang.stok, barang_masuk.tanggal_masuk, user.username');
+        $this->db->select('barang_masuk.id_masuk, barang.nama_barang, barang_masuk.jumlah_masuk, barang_masuk.tanggal_masuk, user.username');
         $this->db->from('barang_masuk');
         $this->db->join('barang', 'barang.id_barang = barang_masuk.barang_id');
         $this->db->join('user', 'user.id_user = barang_masuk.user_id');
@@ -19,7 +19,7 @@ class Barang_masuk_model extends CI_Model {
     // Ambil data barang masuk berdasarkan bulan & tahun
     public function get_by_bulan($bulan, $tahun)
     {
-        $this->db->select('barang_masuk.id_masuk, barang.nama_barang, barang.stok, barang_masuk.tanggal_masuk, user.username');
+        $this->db->select('barang_masuk.id_masuk, barang.nama_barang, barang_masuk.jumlah_masuk, barang_masuk.tanggal_masuk, user.username');
         $this->db->from('barang_masuk');
         $this->db->join('barang', 'barang.id_barang = barang_masuk.barang_id');
         $this->db->join('user', 'user.id_user = barang_masuk.user_id');
@@ -45,7 +45,7 @@ class Barang_masuk_model extends CI_Model {
     // Ambil data barang masuk berdasarkan id
     public function get_by_id($id)
     {
-        $this->db->select('barang_masuk.id_masuk, barang.nama_barang, barang.stok, barang_masuk.tanggal_masuk, user.username, barang_masuk.barang_id');
+        $this->db->select('barang_masuk.id_masuk, barang.nama_barang, barang_masuk.jumlah_masuk, barang_masuk.tanggal_masuk, user.username, barang_masuk.barang_id');
         $this->db->from('barang_masuk');
         $this->db->join('barang', 'barang.id_barang = barang_masuk.barang_id');
         $this->db->join('user', 'user.id_user = barang_masuk.user_id');

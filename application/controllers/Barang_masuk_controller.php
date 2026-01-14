@@ -44,7 +44,7 @@ class Barang_masuk_controller extends CI_Controller {
     {
         // Validasi form
         $this->form_validation->set_rules('barang_id', 'Barang', 'required');
-        $this->form_validation->set_rules('stok', 'Jumlah masuk', 'required|numeric');
+        $this->form_validation->set_rules('jumlah_masuk', 'Jumlah Masuk', 'required|numeric');
 
         if ($this->form_validation->run() === FALSE) {
             // Jika validasi gagal, tampilkan form tambah
@@ -66,7 +66,7 @@ class Barang_masuk_controller extends CI_Controller {
     {
         $data = [
             'barang_id' => $this->input->post('barang_id'),
-            'stok' => $this->input->post('stok'),
+            'jumlah_masuk' => $this->input->post('jumlah_masuk'),
             'tanggal_masuk' => $this->input->post('tanggal_masuk'), // Hanya tanggal, sesuai DB DATE
             'user_id' => $this->session->userdata('id_user') // user yang login
         ];
@@ -106,7 +106,7 @@ class Barang_masuk_controller extends CI_Controller {
     public function ubah($id)
     {
         // Validasi form
-        $this->form_validation->set_rules('stok', 'Stok', 'required|numeric');
+        $this->form_validation->set_rules('jumlah_masuk', 'Jumlah Masuk', 'required|numeric');
 
         if ($this->form_validation->run() === FALSE) {
             // Ambil data barang masuk berdasarkan ID
@@ -122,7 +122,7 @@ class Barang_masuk_controller extends CI_Controller {
             // Update data barang masuk
             $update_data = [
                 'barang_id' => $this->input->post('barang_id'),
-                'jumlah' => $this->input->post('jumlah')
+                'jumlah_masuk' => $this->input->post('jumlah_masuk')
             ];
             $this->Barang_masuk_model->update($id, $update_data);
             $this->session->set_flashdata('message',

@@ -70,7 +70,7 @@
                       <tr>
                         <td><?= $no++ ?></td>
                         <td><?= $bm['nama_barang'] ?></td>
-                        <td><?= $bm['stok'] ?></td>
+                        <td><?= $bm['jumlah_masuk'] ?></td>
                         <td><?= $bm['tanggal_masuk'] ?></td>
                         <td><?= $bm['username'] ?></td>
                         <td>
